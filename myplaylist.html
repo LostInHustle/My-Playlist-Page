@@ -2,13 +2,43 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Suno Playlist Screenshot</title>
+        <title>My Playlist</title>
+        <style>
+            :root {
+                --accent-1: #ff6ec7;
+                --accent-2: #00ffd1;
+                --bg-1: #0f1724;
+            }
+
+            html, body { height: 100%; }
+            body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: radial-gradient(circle at 10% 10%, #0b1220, var(--bg-1)); margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+
+            .card {
+                padding: 18px;
+                border-radius: 18px;
+                background: linear-gradient(135deg, rgba(255,110,199,0.06), rgba(0,255,209,0.04));
+                box-shadow: 0 10px 40px rgba(6,8,15,0.6);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+                max-width: 95vw;
+            }
+
+            .art-wrap { display: inline-block; padding: 8px; border-radius: 14px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); }
+
+            .art-wrap img { display: block; max-width: 92vw; height: auto; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.45); transform: translateZ(0); }
+
+            .art-wrap:hover { transform: translateY(-6px); }
+
+            @media (min-width: 900px) {
+                .card { max-width: 1200px; }
+            }
+        </style>
     </head>
 
-
-    <body align="center">
-        <a href="https://suno.com/playlist/d1af5868-5a4c-4837-a87d-e99ff5496533" target="_blank">
-            <img src="playlist.png" height="1000" title="Click the image to go to the playlist page."></img>
-        </a>
+    <body>
+        <div class="card">
+            <a class="art-wrap" href="https://suno.com/playlist/d1af5868-5a4c-4837-a87d-e99ff5496533" target="_blank" aria-label="Open playlist">
+                <img src="playlist.png" alt="Playlist cover image." title="Click the image to open the playlist." />
+            </a>
+        </div>
     </body>
 </html>
