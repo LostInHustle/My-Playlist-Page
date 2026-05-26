@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html style="background: linear-gradient(135deg, #0f1026, #1b1538); font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Guest Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            background: linear-gradient(90deg, #ff7ab6, #6af8e1, #8e7bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.6rem;
+            padding: 1rem;
+            margin-top: 0;
+            letter-spacing: 0.4px;
+            animation: floatText 6s ease-in-out infinite;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ffffff40, transparent);
+            margin: 2rem auto;
+            width: 80%;
+        }
+
+        a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        p.large-desc {
+            font-size: 1.5rem;
+            background: radial-gradient(circle at center, #00ffffaa, transparent);
+            padding: 1rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            border-radius: 12px;
+        }
+
+        .neon-tag {
+            display: inline-block;
+            font-size: 1.6rem;
+            background: linear-gradient(90deg, #ffd36b, #ff6ec7, #6af8e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            box-shadow: 0 6px 20px rgba(106,78,255,0.12);
+            transform-origin: center;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        iframe {
+            border: none;
+            width: 95vw;
+            height: 600px;
+            margin: 2rem auto;
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .track-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .track-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .track-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        audio {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        button {
+            background: linear-gradient(45deg, #00ffcc, #cc66ff);
+            border: none;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(204, 102, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to my webpage!</h1>
+    <hr>
+    <div style="padding: 1rem;">
+        <a href="mailto:aaronzhuthedude@outlook.com" target="_blank">
+            <img src="Rain.jpg" alt="A photo of me!" title="I'm competing for my class!!" style="max-height: 400px; width: auto;">
+        </a>
+    </div>
+
+    <p class="large-desc">I'm Aaron, and I enjoy making music with Suno AI.</p>
+    <p class="large-desc">You can listen to my tracks on this page.</p>
+    <p class="large-desc">I hope you enjoy the songs.</p>
+
+    <p class="neon-tag">Click the image to open the playlist.</p>
+
+    <iframe src="myplaylist.html" title="Playlist preview"></iframe>
+
+    <h2 class="neon-tag">If you are having trouble opening the link, enjoy the tracks below.</h2>
+
+    <div class="track-container">
+        <p class="track-title">Euphoric Storm (Original)</p>
+        <audio id="audioOne" controls>
+            <source src="Euphoric Storm (Original).mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonOne">Mute</button>
+    </div>
+
+    <div class="track-container">
+        <p class="track-title">Lost in the Night</p>
+        <audio id="audioTwo" controls>
+            <source src="Lost in the Night.mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonTwo">Mute</button>
+    </div>
+
+    <div class="track-container">
+        <p class="track-title">Raindrop Serenade</p>
+        <audio id="audioThree" controls>
+            <source src="Raindrop Serenade.mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonThree">Mute</button>
+    </div>
+
+    <div class="track-container">
+        <p class="track-title">Confusion in the Harmony</p>
+        <audio id="audioFour" controls>
+            <source src="Confusion in the Harmony.mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonFour">Mute</button>
+    </div>
+
+    <div class="track-container">
+        <p class="track-title">Euphoric Storm (Remix)</p>
+        <audio id="audioFive" controls>
+            <source src="Euphoric Storm (Remix).mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonFive">Mute</button>
+    </div>
+
+    <div class="track-container">
+        <p class="track-title">Starlit Nights</p>
+        <audio id="audioSix" controls>
+            <source src="Starlit Nights.mp3" type="audio/mpeg">
+        </audio>
+        <button id="buttonSix">Mute</button>
+    </div>
+
+    <script>
+        const audios = ['audioOne', 'audioTwo', 'audioThree', 'audioFour', 'audioFive', 'audioSix'];
+        const buttons = ['buttonOne', 'buttonTwo', 'buttonThree', 'buttonFour', 'buttonFive', 'buttonSix'];
+
+        audios.forEach((id, index) => {
+            const audio = document.getElementById(id);
+            const button = document.getElementById(buttons[index]);
+
+            button.addEventListener("click", () => {
+                audio.muted = !audio.muted;
+                button.textContent = audio.muted ? "Unmute" : "Mute";
+            });
+        });
+    </script>
+</body>
+</html>
